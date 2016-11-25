@@ -16,7 +16,7 @@ import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener{
 
-    private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 20;
+    private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 50;
     private boolean mIsAvatarShown = true;
 
     private ImageView mProfileImage;
@@ -27,8 +27,8 @@ public class HomeActivity extends AppCompatActivity implements AppBarLayout.OnOf
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.materialup_tabs);
-        ViewPager viewPager  = (ViewPager) findViewById(R.id.materialup_viewpager);
+//        TabLayout tabLayout = (TabLayout) findViewById(R.id.materialup_tabs);
+//        ViewPager viewPager  = (ViewPager) findViewById(R.id.materialup_viewpager);
         AppBarLayout appbarLayout = (AppBarLayout) findViewById(R.id.materialup_appbar);
         mProfileImage = (ImageView) findViewById(R.id.materialup_profile_image);
 
@@ -42,8 +42,8 @@ public class HomeActivity extends AppCompatActivity implements AppBarLayout.OnOf
         appbarLayout.addOnOffsetChangedListener(this);
         mMaxScrollSize = appbarLayout.getTotalScrollRange();
 
-        viewPager.setAdapter(new TabsAdapter(getSupportFragmentManager()));
-        tabLayout.setupWithViewPager(viewPager);
+//        viewPager.setAdapter(new TabsAdapter(getSupportFragmentManager()));
+//        tabLayout.setupWithViewPager(viewPager);
     }
 
     public static void start(Context context){

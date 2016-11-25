@@ -1,7 +1,5 @@
 package com.vgroup.tutor;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -28,7 +26,8 @@ public class MaterialUpConceptFakePage extends Fragment {
     }
 
     private void initRecyclerView() {
-        mRootView.setAdapter(new FakePageAdapter(20));
+        mRootView.setAdapter(new DepartmentAdapter(3));
+        mRootView.setHasFixedSize(true);
     }
 
     public static Fragment newInstance() {
